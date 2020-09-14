@@ -31,20 +31,6 @@
             display: inline-block;
             text-decoration: none;
         }
-        .backg1 {
-            position: absolute;
-            top:30px;
-            left:950px;
-            width:250px;
-            height:250px;
-        }
-        .backg2 {
-            position: absolute;
-            width:250px;
-            height:250px;
-            top:300px;
-            left:900px;
-        }
         input {
             outline: none!important;
         }
@@ -69,7 +55,9 @@
             transition: all 0.6s cubic-bezier(1.000, -0.375, 0.285, 0.995);
             z-index: 9999;
         }
-      
+        .brand:active {
+            width: 100%;
+        }
         .brand::before {
             content: '';
             display: block;
@@ -99,7 +87,11 @@
             text-align: center;
             transition: all 0.6s;
         }
-      
+        .heading:active {
+            top: 100px;
+            left: 100px;
+            transform: translate(0);
+        }
         h2 {
             font-size: 70px;
             font-weight: 700;
@@ -259,7 +251,7 @@
             text-transform: uppercase;
             padding: 5px 30px;
             background: transparent;
-            color: #5dbd03;
+            color: #fff;
             border-radius: 30px;
             margin-right: 20px;
             border: 2px double #5dbd03;
@@ -267,11 +259,9 @@
             transition: 0.5s;
             box-shadow: 0px 0px 8px black;
             text-decoration: none;
-            font-weight: bold;
         }
         a.switch:hover {
             background: #5dbd03;
-            color: white;
             box-shadow: 0px 0px 8px #5dbd03;
             text-decoration: none;
         }
@@ -373,6 +363,33 @@
         .logo {
             width:13%;
         }
+        .backg1 {
+            position: absolute;
+            top:30px;
+            left:83vw;
+            width:250px;
+            height:250px;
+        }
+        .backg2 {
+            position: absolute;
+            top:300px;
+            left:78.7vw;
+            width:250px;
+            height:250px;
+        }
+        .foot {
+            background-color: rgba(255, 255, 255);
+            position:absolute;
+            top:700px;
+            width:100%;
+            height:50px;
+            box-shadow: 0px 0px 20px black;
+        }
+        .toe {
+            background-color: rgba(0, 0, 0,0.85);
+            width:100%;
+            height:110px;
+        }
         @media (max-width: 768px) {
             .container {
                 overflow: hidden;
@@ -382,8 +399,15 @@
             }
             .backg1 {
                 position: absolute;
-                top:0px;
-                left:0px;
+                top:20px;
+                left:20px;
+                width:0px;
+                height:0px;
+            }
+            .backg2 {
+                position: absolute;
+                top:30px;
+                left:10px;
                 width:0px;
                 height:0px;
             }
@@ -449,8 +473,15 @@
             }
             .backg1 {
                 position: absolute;
-                top:0px;
-                left:0px;
+                top:20px;
+                left:20px;
+                width:0px;
+                height:0px;
+            }
+            .backg2 {
+                position: absolute;
+                top:30px;
+                left:10px;
                 width:0px;
                 height:0px;
             }
@@ -482,8 +513,8 @@
     </style>
     <body>
         <div class="container">
-            <img src="ftpbg1.png" class="backg1" style="position: absolute;top:30px;left:1250px;width:250px;height:250px;">
-            <img src="ftpbg3.png" class="backg2" style="position: absolute;top:300px;left:1210px;width:250px;height:250px;">
+            <img src="ftpbg1.png" class="backg1">
+            <img src="ftpbg3.png" class="backg2">
             <section id="formHolder">
         
                 <div class="row">
@@ -563,8 +594,8 @@
          
             </section>
         </div>
-        <footer style="background-color: rgba(255, 255, 255);position:absolute;top:700px;width:1519px;height:50px;box-shadow: 0px 0px 20px black;">
-            <div style="background-color: rgba(0, 0, 0,0.85);width:1519px;height:110px;">
+        <footer class="foot">
+            <div class="toe">
                 <p style="color: #777; font-size: 23px;font-family: 'BenchNine';font-weight: lighter;">
                     <a href="#" class="fa fa-facebook-square"></a><a href="#" class="fas fa-envelope"></a><a href="#" class="fa fa-linkedin-square"></a>The International Relations Cell is a student body working under the Office of International Relations towards increasing IIT Kharagpur's global outreach. Have any issues? Mail us at  <a style="color:rgb(21, 216, 21)"> ftp.ircell@gmail.com</a>
                 </p>
