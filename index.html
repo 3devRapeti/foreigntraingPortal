@@ -60,7 +60,7 @@
             background-size: cover;
             background-position: center center;
             color: #fff;
-            min-height: 540px;
+            min-height: 70vh;
             position: relative;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
             transition: all 0.6s cubic-bezier(1.000, -0.375, 0.285, 0.995);
@@ -146,7 +146,7 @@
         }
         .form-peice {
             background: #fff;
-            min-height: 480px;
+            min-height: 62vh;
             margin-top: 30px;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
             color: #bbbbbb;
@@ -418,6 +418,22 @@
             font-family: 'BenchNine';
             font-weight: lighter;
         }
+        .smhead {
+            display: none;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(0, 0, 0, 0.411);
+            color: rgba(118, 231, 118,1);
+            background: url('ftptxtbg2.jpg') top ;
+            background-size: 100%;
+            -webkit-background-clip: text;
+        }
+        .smhead1 {
+            display: block;
+        }
         @media (min-width: 1300px) {
             .toe {
                 height:70px;
@@ -429,11 +445,20 @@
                 max-width: 900px;
                 left:0vw;
             }
+            a.switch {
+                top:70%;
+            }
             section#formHolder {
                 padding: 0;
             }
             .toe {
                 font-size: 17px;
+            }
+            .smhead {
+                display: block;
+            }
+            .smhead1 {
+                display: none;
             }
             .backg1 {
                 position: absolute;
@@ -449,6 +474,9 @@
                 width:0px;
                 height:0px;
             }
+            .CTA {
+                margin:12px;
+            }
             .foot {
                 display: none;
             }
@@ -456,7 +484,7 @@
                 display: block;
             }
             div.brand {
-                min-height: 200px !important;
+                min-height: 25vh !important;
             }
             .brand.active {
                 min-height: 100vh !important;
@@ -475,7 +503,7 @@
             }
             .form {
                 width: 80vw;
-                min-height: 500px;
+                min-height: 100vh;
                 margin-left: 10vw;
             }
             .form-peice {
@@ -491,7 +519,6 @@
                 left: 0;
             }
             form {
-                width: 100% !important;
                 padding: 60px;
                 left: 50%;
             }
@@ -507,14 +534,29 @@
             .logo {
                 width:9%;
             }
+            .smhead:hover {
+                color:rgba(118, 231, 118,1);
+            }
         }
         @media (max-width: 480px) {
+            .smhead:hover {
+                color:rgba(118, 231, 118,1);
+            }
             section#formHolder .form {
                 width: 100vw;
                 margin-left: 0;
             }
+            .container {
+                overflow: hidden;
+                max-width: 900px;
+                left:0vw;
+            }
+            a.switch {
+                top:70%;
+            }
             .toe {
                 font-size: 17px;
+                max-height: 15vh;
             }
             .backg1 {
                 position: absolute;
@@ -529,6 +571,12 @@
                 left:10px;
                 width:0px;
                 height:0px;
+            }
+            .smhead {
+                display: block;
+            }
+            .smhead1 {
+                display: none;
             }
             .foot {
                 display: none;
@@ -546,6 +594,9 @@
             }
             .or {
                 left: 27%;
+            }
+            .logo {
+                width:9%;
             }
         }
         h4:after,
@@ -573,9 +624,9 @@
             
                     <!-- Brand Box -->
                         <div class="col-sm-6 brand" style="box-shadow: 0px 0px 15px black;">
-                            <img src="logo.png" class="logo">
+                            <img src="logo.png" class="logo"><a class="smhead" style="font-weight:900; float:right;">FOREIGN TRAINING PROGRAM</a>
                             <div class="heading">
-                                <h2 style="font-weight:900;">FOREIGN TRAINING PROGRAM</h2>
+                                <h2 class="smhead1" style="font-weight:900;">FOREIGN TRAINING PROGRAM</h2>
                             </div>
                             <a href="#" class="switch">I"M NEW</a>
                         </div>
