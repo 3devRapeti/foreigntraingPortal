@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Average Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=BenchNine' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Asap Condensed' rel='stylesheet'>
@@ -108,6 +108,7 @@
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 0;
+            font-family: 'Candal';
         }
         .success-msg {
             width: 100%;
@@ -269,7 +270,7 @@
             color: #fff;
             border-radius: 30px;
             margin-right: 20px;
-            border: 2px double #5dbd03;
+            border: 2px solid #5dbd03;
             font-family: 'Montserrat', sans-serif;
             transition: 0.5s;
             box-shadow: 0px 0px 8px black;
@@ -420,7 +421,7 @@
         }
         .smhead {
             display: none;
-            font-size: 4.8vw;
+            font-size: 4.6vw;
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 0;
@@ -444,12 +445,14 @@
                 overflow: hidden;
                 max-width: 900px;
                 left:0vw;
+                min-height: 91vh;
             }
             a.switch {
                 top:70%;
             }
             section#formHolder {
                 padding: 0;
+                min-height: 91vh;
             }
             .toe {
                 font-size: 17px;
@@ -474,9 +477,6 @@
                 width:0px;
                 height:0px;
             }
-            .CTA {
-                margin:12px;
-            }
             .foot {
                 display: none;
             }
@@ -484,7 +484,7 @@
                 display: block;
             }
             div.brand {
-                min-height: 25vh !important;
+                min-height: 15vh !important;
             }
             .brand.active {
                 min-height: 100vh !important;
@@ -509,14 +509,14 @@
             .form-peice {
                 margin: 0;
                 top: 0;
-                left: 0;
-                width: 100% !important;
+                left: 5%;
+                width: 90% !important;
                 transition: all .5s ease-in-out;
             }
             .form-peice.switched {
                 transform: translateY(-100%);
-                width: 100%;
-                left: 0;
+                width: 90%;
+                left: 5%;
             }
             form {
                 padding: 60px;
@@ -539,17 +539,34 @@
             }
         }
         @media (max-width: 480px) {
+            .form-peice.switched {
+                transform: translateY(-100%);
+                width: 90%;
+                left: 5%;
+            }
+            .form-peice {
+                margin: 0;
+                top: 0;
+                left: 5%;
+                width: 90% !important;
+                transition: all .5s ease-in-out;
+            }
             .smhead:hover {
                 color:rgba(118, 231, 118,1);
             }
             section#formHolder .form {
                 width: 100vw;
                 margin-left: 0;
+                min-height: 91vh;
             }
             .container {
                 overflow: hidden;
                 max-width: 900px;
                 left:0vw;
+                min-height: 91vh;
+            }
+            .brand {
+                min-height: 15vh;
             }
             a.switch {
                 top:70%;
@@ -564,9 +581,6 @@
                 left:20px;
                 width:0px;
                 height:0px;
-            }
-            .brand {
-                min-height:25vh;
             }
             .backg2 {
                 position: absolute;
@@ -608,8 +622,6 @@
             text-decoration:line-through;
         }
         h2 {
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: rgba(0, 0, 0, 0.411);
             color: rgba(118, 231, 118,1);
             background: url('ftptxtbg2.jpg') top ;
             background-size: 100%;
@@ -815,4 +827,3 @@
     </body>
 </head>
 </html>
-
