@@ -22,7 +22,17 @@
         }
         body {
             font-family: 'Montserrat', sans-serif;
+            background: #000000;
+            margin:0px;
+        }
+        .content {
+            font-family: 'Montserrat', sans-serif;
             background: #fff099;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            height: 91vh;
+            width: 98.9vw;
         }
         .container {
             max-width: 60vw;
@@ -158,7 +168,7 @@
             margin: 0;
             width: 70%;
             position: absolute;
-            top: 55%;
+            top: 50%;
             left: 60%;
             transform: translate(-50%, -50%);
         }
@@ -185,7 +195,7 @@
             z-index: -1;
             text-align: center;
             align-content: center;
-            color:rgb(185, 185, 185);
+            color:rgb(96, 131, 64);
         }
         label.active {
             transform: translateY(10px);
@@ -202,11 +212,13 @@
             display: block;
             padding: 10px 0;
             width: 100%;
-            border-bottom: 1px solid rgb(185, 255, 179);
+            border-bottom: 1px solid rgb(96, 131, 64,0.4);
             color: #444;
             font-size: 15px;
             font-family: 'Montserrat', sans-serif;;
             z-index: 1;
+            text-align: center;
+            align-content: center;
         }
         .hasError {
             border-color: #f95959;
@@ -221,7 +233,9 @@
             display: none;
         }
         input[type=password] {
-            color: #f95959;
+            color: #444;
+            text-align: center;
+            align-content: center;
         }
         .CTA {
             margin-top: 30px;
@@ -399,11 +413,15 @@
         .toe {
             background-color: rgba(0, 0, 0,0.85);
             width:100%;
-            height:70px;
             color: #777; 
             font-size: 23px;
             font-family: 'BenchNine';
             font-weight: lighter;
+        }
+        @media (min-width: 1300px) {
+            .toe {
+                height:70px;
+            }
         }
         @media (max-width: 768px) {
             .container {
@@ -416,7 +434,6 @@
             }
             .toe {
                 font-size: 17px;
-                height:110px;
             }
             .backg1 {
                 position: absolute;
@@ -483,9 +500,7 @@
                 text-align: center;
                 padding-left: 0px;
             }
-            .or {
-                left: 27%;
-            }
+
             h2 {
                 font-size: 30px !important;
             }
@@ -500,7 +515,6 @@
             }
             .toe {
                 font-size: 17px;
-                height:110px;
             }
             .backg1 {
                 position: absolute;
@@ -549,87 +563,72 @@
         }
     </style>
     <body>
-        <div class="container">
-            <img src="ftpbg1.png" class="backg1">
-            <img src="ftpbg3.png" class="backg2">
-            <section id="formHolder">
-        
-                <div class="row">
-         
-                  <!-- Brand Box -->
-                    <div class="col-sm-6 brand" style="box-shadow: 0px 0px 15px black;">
-                        <img src="logo.png" class="logo">
-                        <div class="heading">
-                            <h2 style="font-weight:900;">FOREIGN TRAINING PROGRAM</h2>
-                        </div>
-                        <a href="#" class="switch">LOGIN</a>
-                    </div>
-        
-        
-                  <!-- Form Box -->
-                    <div class="col-sm-6 form">
+        <div class="content">
+            <div class="container">
+                <img src="ftpbg1.png" class="backg1">
+                <img src="ftpbg3.png" class="backg2">
+                <section id="formHolder">
             
-                        <!-- Login Form -->
-                        <div class="login form-peice switched" style="margin-right:-10px;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);">
-                            <div class="imglinks">
-                                <div style="align-content: center;text-align: center;">
-                                    <a href="#" class="fa fa-facebook"></a>
-                                    <a href="#" class="fa fa-google"></a>
-                                    <a href="#" class="fa fa-linkedin"></a>
-                                    <span></span>
-                                    <span class="or"><h4 style="font-size: 15px;"> OR </h4></span>
-                                </div>
+                    <div class="row">
+            
+                    <!-- Brand Box -->
+                        <div class="col-sm-6 brand" style="box-shadow: 0px 0px 15px black;">
+                            <img src="logo.png" class="logo">
+                            <div class="heading">
+                                <h2 style="font-weight:900;">FOREIGN TRAINING PROGRAM</h2>
                             </div>
-                            <form class="login-form" action="#" method="post" style="margin-right:-10px;">
-                                <div class="form-group">
-                                    <label style="padding-left: 128px;" for="loginemail">Email Adderss</label>
-                                    <input type="email" name="loginemail" id="loginemail" required>
-                                </div>
-                
-                                <div class="form-group">
-                                    <label style="padding-left: 144px;" for="loginPassword">Password</label>
-                                    <input type="password" name="loginPassword" id="loginPassword" required>
-                                </div>
-                                <div class="CTA" style="padding-left: 125px;">
-                                    <input class="ctainput" type="submit" value="Login">
-                                </div>
-                            </form>
+                            <a href="#" class="switch">I"M NEW</a>
                         </div>
-                        <div class="signup form-peice" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);">
-                            <div class="imglinks">
-                                <div style="align-content: center;text-align: center;">
-                                    <a href="#" class="fa fa-facebook"></a>
-                                    <a href="#" class="fa fa-google"></a>
-                                    <a href="#" class="fa fa-linkedin"></a>
-                                    <span></span>
-                                    <span class="or"><h4 style="font-size: 15px;"> OR </h4></span>
-                                </div>
+            
+            
+                    <!-- Form Box -->
+                        <div class="col-sm-6 form">
+                
+                            <!-- Login Form -->
+                            <div class="login form-peice" style="margin-right:-10px;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);">
+                                <form class="login-form" action="#" method="post" style="margin-right:-10px;">
+                                    <div class="form-group" style="align-content: center;text-align: center;">
+                                        <label for="loginemail">Email Adderss</label>
+                                        <input type="email" name="loginemail" id="loginemail" required>
+                                    </div>
+                    
+                                    <div class="form-group" style="align-content: center;text-align: center;">
+                                        <label for="loginPassword">Password</label>
+                                        <input type="password" name="loginPassword" id="loginPassword" required>
+                                    </div>
+                                    <div class="CTA" style="align-content: center;text-align: center;padding-left:2vw;">
+                                        <input class="ctainput" type="submit" value="Login">
+                                    </div>
+                                </form>
                             </div>
-                            <form class="signup-form" action="#" method="post">
-                                <div class="form-group">
-                                    <label style="padding-left: 128px;" for="email">Email Address</label>
-                                    <input type="email" name="emailAdress" id="email" class="email">
-                                    <span class="error"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label style="padding-left: 144px;" for="password">Password</label>
-                                    <input type="password" name="password" id="password" class="pass">
-                                    <span class="error"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label style="padding-left: 115px;" for="passwordCon">Confirm Password</label>
-                                    <input type="password" name="passwordCon" id="passwordCon" class="passConfirm">
-                                    <span class="error"></span>
-                                </div>
-                                <div class="CTA" style="padding-left: 120px;">
-                                    <input class="ctainput" type="submit" value="Signup" id="submit">
-                                </div>
-                            </form>
-                        </div><!-- End Signup Form -->
+                            <div class="signup form-peice switched" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);">
+                                <form class="signup-form" action="#" method="post">
+                                    <div class="form-group" style="align-content: center;text-align: center;">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" name="emailAdress" id="email" class="email">
+                                        <span class="error"></span>
+                                        <span id="demo" style="color:red;font-family: 'Montserrat', sans-serif;font-size: 12px;"></span>
+                                    </div>
+                                    <div class="form-group" style="align-content: center;text-align: center;">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" id="password" class="pass">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="form-group" style="align-content: center;text-align: center;">
+                                        <label for="passwordCon">Confirm Password</label>
+                                        <input type="password" name="passwordCon" id="passwordCon" class="passConfirm">
+                                        <span class="error"></span>
+                                    </div>
+                                    <div class="CTA" style="align-content: center;text-align: center;padding-left:2vw;">
+                                        <input class="ctainput" type="submit" value="Signup" id="submit">
+                                    </div>
+                                </form>
+                            </div><!-- End Signup Form -->
+                        </div>
                     </div>
-                </div>
-         
-            </section>
+            
+                </section>
+            </div>
         </div>
         <footer class="foot">
             <div class="toe">
@@ -668,7 +667,16 @@
             $('input').blur(function () {
                 // Email
                 if ($(this).hasClass('email')) {
-                    if ($(this).val().length == '') {
+                    var email=$(this).val();
+                    var patt = /@iitkgp.ac.in/g;
+                    var result = patt.test(email);
+                    if (result) {
+                        document.getElementById("demo").innerHTML = '';
+                    }
+                    else {
+                        document.getElementById("demo").innerHTML = 'Please register with institute email address';
+                    }
+                    if (email.length == '') {
                         $(this).siblings('span.error').text('Please type your email address').fadeIn().parent('.form-group').addClass('hasError');
                         emailError = true;
                     } else {
@@ -753,3 +761,4 @@
     </body>
 </head>
 </html>
+
