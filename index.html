@@ -1,824 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Darker Grotesque' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=BenchNine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Notable' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Be Vietnam' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
     <link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Asap Condensed' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/748afcfddd.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>International Relations | IIT Kharagpur</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #000000;
-            margin:0px;
-        }
-        .content {
-            font-family: 'Montserrat', sans-serif;
-            background: #fff099;
-            position: absolute;
-            top:0px;
-            left: 0px;
-            height: 91vh;
-            width: 98.9vw;
-        }
-        .container {
-            max-width: 60vw;
-            left:20vw;
-        }
-        a {
-            display: inline-block;
-            text-decoration: none;
-        }
-        input {
-            outline: none!important;
-        }
-        h1 {
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-            font-weight: 700;
-        }
-        section#formHolder {
-            padding: 50px 0;
-        }
-        .brand {
-            padding: 20px;
-            background: url(https://goo.gl/A0ynht);
-            background-size: cover;
-            background-position: center center;
-            color: #fff;
-            min-height: 70vh;
-            position: relative;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.6s cubic-bezier(1.000, -0.375, 0.285, 0.995);
-            z-index: 9999;
-        }
-        .brand:active {
-            width: 100%;
-        }
-        .brand::before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.85);
-            z-index: -1;
-        }
-        a.logo {
-            color: #f95959;
-            font-size: 20px;
-            font-weight: 700;
-            text-decoration: none;
-            line-height: 1em;
-        }
-        .heading {
-            font-size: 15px;
-            font-weight: 300;
-            text-transform: uppercase;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            transition: all 0.6s;
-        }
-        .heading:active {
-            top: 100px;
-            left: 100px;
-            transform: translate(0);
-        }
-        h2 {
-            font-size: 70px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 0;
-            font-family: 'Candal';
-        }
-        .success-msg {
-            width: 100%;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin-top: 60px;
-        }
-        p.succ {
-            font-size: 25px;
-            font-weight: 400;
-            font-family: 'Raleway', sans-serif;
-        }
-        a.succ {
-            font-size: 12px;
-            text-transform: uppercase;
-            padding: 8px 30px;
-            background: #f95959;
-            text-decoration: none;
-            color: #fff;
-            border-radius: 30px;
-        }
-        .succ {
-            transition: all 0.9s;
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        .success-msg:active {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        .form {
-            position: relative;
-        }
-        .form-peice {
-            background: #fff;
-            min-height: 62vh;
-            margin-top: 30px;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-            color: #bbbbbb;
-            padding: 30px 0 60px;
-            transition: all 0.9s cubic-bezier(1.000, -0.375, 0.285, 0.995);
-            position: absolute;
-            top: 0;
-            left: -30%;
-            width: 130%;
-            overflow: hidden;
-        }
-        .switched {
-            transform: translateX(-100%);
-            width: 100%;
-            left: 0;
-        }
-        form {
-            padding: 0 40px;
-            margin: 0;
-            width: 70%;
-            position: absolute;
-            top: 50%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-        }
-        .form-group {
-            margin-bottom: 5px;
-            position: relative;
-        }
-        .input-group-append {
-            padding: 8px;
-        }
-        span#basic-addon2 {
-            color: black;
-            font-weight: 700;
-            color: #444;
-        }
-        label {
-            font-size: 12px;
-            font-weight: 400;
-            text-transform: uppercase;
-            font-family: 'Montserrat', sans-serif;
-            transform: translateY(40px);
-            transition: all 0.4s;
-            cursor: text;
-            z-index: -1;
-            text-align: center;
-            align-content: center;
-            color:rgb(96, 131, 64);
-        }
-        label.active {
-            transform: translateY(10px);
-            font-size: 10px;
-        }
-        label.fontSwitch {
-            font-family: 'Raleway', sans-serif !important;
-            font-weight: 600;
-        }
-        input:not([type=submit]) {
-            background: none;
-            outline: none;
-            border: none;
-            display: block;
-            padding: 10px 0;
-            width: 100%;
-            border-bottom: 1px solid rgb(96, 131, 64,0.4);
-            color: #444;
-            font-size: 15px;
-            font-family: 'Montserrat', sans-serif;;
-            z-index: 1;
-            text-align: center;
-            align-content: center;
-        }
-        .hasError {
-            border-color: #f95959;
-        }
-        span.error {
-            display: none;
-        }
-        input[type=password] {
-            color: #444;
-            text-align: center;
-            align-content: center;
-        }
-        .CTA {
-            margin-top: 30px;
-        }
-        input.ctainput {
-            font-size: 15px;
-            text-transform: uppercase;
-            padding: 5px 30px;
-            background: #5dbd03;
-            color: #fff;
-            border-radius: 30px;
-            margin-right: 20px;
-            border: none;
-            font-family: 'Montserrat', sans-serif;
-            transition: 0.5s;
-            box-shadow: 0px 0px 8px black;
-        }
-        .ctainput:hover {
-            background: #284e04;
-            box-shadow: 0px 0px 8px #284e04;
-        }
-        a.switch {
-            position: absolute;
-            top:90%;
-            left:50%;
-            transform: translate(-50%,-50%);
-            font-size: 13px;
-            text-transform: uppercase;
-            padding: 3px 20px;
-            background: transparent;
-            color: #fff;
-            border-radius: 30px;
-            margin-right: 20px;
-            border: 2px solid #5dbd03;
-            font-family: 'Montserrat', sans-serif;
-            transition: 0.5s;
-            box-shadow: 0px 0px 8px black;
-            text-decoration: none;
-        }
-        a.switch:hover {
-            background: #5dbd03;
-            box-shadow: 0px 0px 8px #5dbd03;
-            text-decoration: none;
-        }
-        footer {
-            text-align: center
-        }
-        .flink, .flink:focus {
-            color: #b8b09f;
-            transition: all .3s;
-            text-decoration: none !important;
-        }
-        .flink:hover {
-            color: #f95959;
-        }
-        .fa {
-            padding: 10px;
-            font-size: 30px;
-            width: 50px;
-            height:50px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-            align-content: center;
-            text-align: center;
-            transition: 0.5s;
-        }
-        .fas {
-            padding: 10px;
-            font-size: 30px;
-            width: 50px;
-            height:50px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-            text-align: center;
-            transition: 0.5s;
-        }
-
-            /* Add a hover effect if you want */
-        .fa:hover {
-            box-shadow: 0px 0px 8px black;
-            color:white;
-            text-decoration: none;
-        }
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-        }
-        .fa-google {
-            background: #dd4b39;
-            color: white;
-        }
-        .fa-linkedin {
-            background: #007bb5;
-            color: white;
-        }
-        .fa-facebook-square {
-            background: transparent;
-            color: white;
-        }
-        .fa-facebook-square:hover {
-            box-shadow: 0px 0px 0px black;
-            color: #3B5998;
-            text-decoration: none;
-        }
-        .fa-envelope {
-            background: transparent;
-            color: white;
-        }
-        .fa-envelope:hover {
-            box-shadow: 0px 0px 0px black;
-            color: #ee3131;
-            text-decoration: none;
-        }
-        .fa-linkedin-square {
-            background: transparent;
-            color: white;
-        }
-        .fa-linkedin-square:hover {
-            box-shadow: 0px 0px 0px black;
-            color: #007bb5;
-            text-decoration: none;
-        }
-        .imglinks {
-            padding-left:140px;
-        }
-        .or {
-            color:rgb(3, 112, 3);
-            align-content: center;
-            text-align: center;
-            font-size: 12px;
-            position: absolute;
-            top:20%;
-            left:43.5%;
-            line-height: 0.1em;
-            margin: 10px 0 20px;
-        }
-        .logo {
-            width:13%;
-        }
-        .backg1 {
-            position: absolute;
-            top:4vh;
-            left:82vw;
-            width:250px;
-            height:250px;
-        }
-        .backg2 {
-            position: absolute;
-            top:40vh;
-            left:78.7vw;
-            width:250px;
-            height:250px;
-        }
-        .foot {
-            display: block;
-            background-color: rgba(255, 255, 255);
-            position:absolute;
-            top:91vh;
-            width:100%;
-            height:50px;
-            box-shadow: 0px 0px 20px black;
-        }
-        .foot1 {
-            display: none;
-            background-color: rgba(255, 255, 255);
-            position:absolute;
-            top:91vh;
-            width:100%;
-            height:50px;
-            box-shadow: 0px 0px 20px black;
-        }
-        .toe {
-            background-color: rgba(0, 0, 0,0.85);
-            width:100%;
-            color: #777; 
-            font-size: 23px;
-            font-family: 'BenchNine';
-            font-weight: lighter;
-        }
-        .smhead {
-            display: none;
-            font-size: 4.6vw;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 0;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: rgba(0, 0, 0, 0.411);
-            color: rgba(118, 231, 118,1);
-            background: url('ftptxtbg2.jpg') top ;
-            background-size: 100%;
-            -webkit-background-clip: text;
-        }
-        .smhead1 {
-            display: block;
-        }
-        @media (min-width: 1300px) {
-            .toe {
-                height:70px;
-            }
-        }
-        @media (max-width: 768px) {
-            .container {
-                overflow: hidden;
-                max-width: 900px;
-                left:0vw;
-                min-height: 91vh;
-            }
-            a.switch {
-                top:70%;
-            }
-            section#formHolder {
-                padding: 0;
-                min-height: 91vh;
-            }
-            .toe {
-                font-size: 17px;
-            }
-            .smhead {
-                display: block;
-            }
-            .smhead1 {
-                display: none;
-            }
-            .backg1 {
-                position: absolute;
-                top:20px;
-                left:20px;
-                width:0px;
-                height:0px;
-            }
-            .backg2 {
-                position: absolute;
-                top:30px;
-                left:10px;
-                width:0px;
-                height:0px;
-            }
-            .foot {
-                display: none;
-            }
-            .foot1 {
-                display: block;
-            }
-            div.brand {
-                min-height: 15vh !important;
-            }
-            .brand.active {
-                min-height: 100vh !important;
-            }
-            .heading.active {
-                top: 200px;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-            p.succ {
-                font-size: 16px;
-            }
-            a.succ {
-                padding: 5px 30px;
-                font-size: 10px;
-            }
-            .form {
-                width: 80vw;
-                min-height: 100vh;
-                margin-left: 10vw;
-            }
-            .form-peice {
-                margin: 0;
-                top: 0;
-                left: 5%;
-                width: 90% !important;
-                transition: all .5s ease-in-out;
-            }
-            .form-peice.switched {
-                transform: translateY(-100%);
-                width: 90%;
-                left: 5%;
-            }
-            form {
-                padding: 60px;
-                left: 50%;
-            }
-            .imglinks {
-                align-content: center;
-                text-align: center;
-                padding-left: 0px;
-            }
-
-            h2 {
-                font-size: 30px !important;
-            }
-            .logo {
-                width:9%;
-            }
-            .smhead:hover {
-                color:rgba(118, 231, 118,1);
-            }
-        }
-        @media (max-width: 480px) {
-            .form-peice.switched {
-                transform: translateY(-100%);
-                width: 90%;
-                left: 5%;
-            }
-            .form-peice {
-                margin: 0;
-                top: 0;
-                left: 5%;
-                width: 90% !important;
-                transition: all .5s ease-in-out;
-            }
-            .smhead:hover {
-                color:rgba(118, 231, 118,1);
-            }
-            section#formHolder .form {
-                width: 100vw;
-                margin-left: 0;
-                min-height: 91vh;
-            }
-            .container {
-                overflow: hidden;
-                max-width: 900px;
-                left:0vw;
-                min-height: 91vh;
-            }
-            .brand {
-                min-height: 15vh;
-            }
-            a.switch {
-                top:70%;
-            }
-            .toe {
-                font-size: 17px;
-                max-height: 15vh;
-            }
-            .backg1 {
-                position: absolute;
-                top:20px;
-                left:20px;
-                width:0px;
-                height:0px;
-            }
-            .backg2 {
-                position: absolute;
-                top:30px;
-                left:10px;
-                width:0px;
-                height:0px;
-            }
-            .smhead {
-                display: block;
-            }
-            .smhead1 {
-                display: none;
-            }
-            .foot {
-                display: none;
-            }
-            .foot1 {
-                display: block;
-            }
-            h2 {
-                font-size: 50px !important;
-            }
-            .imglinks {
-                align-content: center;
-                text-align: center;
-                padding-left: 0px;
-            }
-            .or {
-                left: 27%;
-            }
-            .logo {
-                width:9%;
-            }
-        }
-        h4:after,
-        h4:before{
-            content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
-            text-decoration:line-through;
-        }
-        h2 {
-            color: rgba(118, 231, 118,1);
-            background: url('ftptxtbg2.jpg') top ;
-            background-size: 100%;
-            -webkit-background-clip: text;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="login.css">
+   
     <body>
-        <div class="content">
-            <div class="container">
-                <img src="ftpbg1.png" class="backg1">
-                <img src="ftpbg3.png" class="backg2">
-                <section id="formHolder">
-            
-                    <div class="row">
-            
-                    <!-- Brand Box -->
-                        <div class="col-sm-6 brand" style="box-shadow: 0px 0px 15px black;">
-                            <img src="logo.png" class="logo"><a class="smhead" style="font-weight:900; float:right;">FOREIGN TRAINING PROGRAM</a>
-                            <div class="heading">
-                                <h2 class="smhead1" style="font-weight:900;">FOREIGN TRAINING PROGRAM</h2>
-                            </div>
-                            <a href="#" class="switch">I"M NEW</a>
-                        </div>
-            
-            
-                    <!-- Form Box -->
-                        <div class="col-sm-6 form">
-                
-                            <!-- Login Form -->
-                            <div class="login form-peice" style="margin-right:-10px;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);">
-                                <form class="login-form" action="#" method="post" style="margin-right:-10px;">
-                                    <div class="form-group" style="align-content: center;text-align: center;">
-                                        <label for="loginemail">Email Adderss</label>
-                                        <input type="email" name="loginemail" id="loginemail" required>
-                                    </div>
-                    
-                                    <div class="form-group" style="align-content: center;text-align: center;">
-                                        <label for="loginPassword">Password</label>
-                                        <input type="password" name="loginPassword" id="loginPassword" required>
-                                    </div>
-                                    <div class="CTA" style="align-content: center;text-align: center;">
-                                        <input class="ctainput" type="submit" value="Login">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="signup form-peice switched" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);">
-                                <form class="signup-form" action="#" method="post">
-                                    <div class="form-group" style="align-content: center;text-align: center;">
-                                        <label for="email">Email Address</label>
-                                        <input type="email" name="emailAdress" id="email" class="email">
-                                        <span class="error" style="color:red;font-family: 'Montserrat', sans-serif;font-size: 12px;"></span>
-                                        <span id="demo" style="color:red;font-family: 'Montserrat', sans-serif;font-size: 12px;"></span>
-                                    </div>
-                                    <div class="form-group" style="align-content: center;text-align: center;">
-                                        <label for="password">Password</label>
-                                        <input type="password" name="password" id="password" class="pass">
-                                        <span class="error" style="color:red;font-family: 'Montserrat', sans-serif;font-size: 12px;"></span>
-                                    </div>
-                                    <div class="form-group" style="align-content: center;text-align: center;">
-                                        <label for="passwordCon">Confirm Password</label>
-                                        <input type="password" name="passwordCon" id="passwordCon" class="passConfirm">
-                                        <span class="error" style="color:red;font-family: 'Montserrat', sans-serif;font-size: 12px;"></span>
-                                    </div>
-                                    <div class="CTA" style="align-content: center;text-align: center;">
-                                        <input class="ctainput" type="submit" value="Signup" id="submit">
-                                    </div>
-                                </form>
-                            </div><!-- End Signup Form -->
-                        </div>
-                    </div>
-            
-                </section>
-            </div>
-        </div>
-        <footer class="foot">
-            <div class="toe">
-                <p>
-                    <a href="#" class="fa fa-facebook-square"></a><a href="#" class="fas fa-envelope"></a><a href="#" class="fa fa-linkedin-square"></a>The International Relations Cell is a student body working under the Office of International Relations towards increasing IIT Kharagpur's global outreach. Have any issues? Mail us at  <a style="color:rgb(21, 216, 21)"> ftp.ircell@gmail.com</a>
-                </p>
-            </div>
-        </footer>
-        <footer class="foot1">
-            <div class="toe">
-                <p style="text-align: center;align-content: center;">
-                    <a href="#" class="fa fa-facebook-square"></a><a href="#" class="fas fa-envelope"></a><a href="#" class="fa fa-linkedin-square"></a></br>The International Relations Cell is a student body working under the Office of International Relations towards increasing IIT Kharagpur's global outreach. Have any issues? Mail us at  <a style="color:rgb(21, 216, 21)"> ftp.ircell@gmail.com</a>
-                </p>
-            </div>
-        </footer>
+
+
+        
+        <div class="container">
+       
+            <section id="formHolder">
          
-        <script>
-            $(document).ready(function () {
+               <div class="row">
+         
+                  <!-- Brand Box -->
+                  <div class="col-sm-6 brand">
+                   <img src="logo.png" style="width:10%">
+         
+                     <div class="heading">
+                        <h2>FOREIGN TRAINING PROGRAM</h2>
+                        <span class="year">2019-2020</span>
+                   
+                     </div>
+                  <!-- Added switch button here-->
+                     <a href="#" class="switch">Register</a>
+                    
+                  </div>
+         
+         
+                  <!-- Form Box -->
+                  <div class="col-sm-6 form">
+         
+                     <!-- Login Form -->
+                     <div class="login form-peice">
+                        
+                        <form class="login-form" action="#" method="post">
+                           <h4 style="text-align: center;margin-bottom:30px">Sign in to your Account</h4>
+                           <div class="form-group">
+                              <input type="text" name="email" class="input-text Emaild" placeholder="Email Address">
+                              <!-- <b>@iitkgp.ac.in</b> -->
+                              <div class="input-group-append">
+                                  <span class="input-group-text" id="basic-addon2">@iitkgp.ac.in</span>
+                              </div>
+                          </div>
 
-            'use strict';
+                          <div class="form-group">
+                           <input type="password" name="password" class="input-text" placeholder="Password">
+                       </div>
 
-            var usernameError = true,
-                emailError    = true,
-                passwordError = true,
-                passConfirm   = true;
+                           <div class="CTA">
+                              <input class="ctainput" type="submit" value="Login">
+                              <a class="forget" href="#">Forget Password</a>
+                           </div>
+                           
+                           
+                        </form>
+                     </div>
+                     <!-- End Login Form -->
+         
+         
+                     <!-- Signup Form -->
+                     <div class="signup form-peice switched">
+                        <form class="signup-form" action="#" method="post">
+                           <h4 style="text-align: center;margin-bottom:30px">Register New Account</h4>
+                           <div class="form-group">
+                              <input type="text" name="email" class="input-text Emaild" placeholder="Email Address">
+                              <!-- <b>@iitkgp.ac.in</b> -->
+                              <div class="input-group-append">
+                                  <span class="input-group-text" id="basic-addon2">@iitkgp.ac.in</span>
+                              </div>
+                          </div>
 
-            // Detect browser for css purpose
-            if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-                $('.form form label').addClass('fontSwitch');
-            }
-            $('input').focus(function () {
-                $(this).siblings('label').addClass('active');
-            });
-
-            // Form validation
-            $('input').blur(function () {
-                // Email
-                if ($(this).hasClass('email')) {
-                    var email=$(this).val();
-                    var patt = /@iitkgp.ac.in/g;
-                    var result = patt.test(email);
-                    if (result) {
-                        document.getElementById("demo").innerHTML = '';
-                        $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
-                        emailError = false;
-                    }
-                    else if (email.length == ''){
-                        document.getElementById("demo").innerHTML = '';
-                        $(this).siblings('span.error').text('Please type your email address').fadeIn().parent('.form-group').addClass('hasError');
-                        emailError = true;
-                    }
-                    else {
-                        document.getElementById("demo").innerHTML = 'Please register with institute email address';
-                        $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
-                        emailError = true;
-                    }
-                }
-
-                // PassWord
-                if ($(this).hasClass('pass')) {
-                    if ($(this).val().length < 8) {
-                        $(this).siblings('span.error').text('Please type at least 8 charcters').fadeIn().parent('.form-group').addClass('hasError');
-                        passwordError = true;
-                    } else {
-                        $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
-                        passwordError = false;
-                    }
-                }
-
-                // PassWord confirmation
-                if ($('.pass').val() !== $('.passConfirm').val()) {
-                    $('.passConfirm').siblings('.error').text('Passwords are not matching').fadeIn().parent('.form-group').addClass('hasError');
-                    passConfirm = false;
-                } else {
-                    $('.passConfirm').siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
-                    passConfirm = false;
-                }
-
-                // label effect
-                if ($(this).val().length > 0) {
-                    $(this).siblings('label').addClass('active');
-                } else {
-                    $(this).siblings('label').removeClass('active');
-                }
-            });
-
-
-            // form switch
-            $('a.switch').click(function (e) {
-                $(this).toggleClass('active');
-                e.preventDefault();
-                if($('.switched').hasClass('signup')) {
-                    $('a.switch').html("Login");
-                    $('.signup').removeClass('switched');
-                    $('.login').addClass('switched');
-                } 
-                else if($('.switched').hasClass('login')) {
-                    $('a.switch').html("I'm New");
-                    $('.login').removeClass('switched');
-                    $('.signup').addClass('switched');
-                }
-            });
-
-
-            // Form submit
-            $('form.signup-form').submit(function (event) {
-                event.preventDefault();
-
-                if (usernameError == true || emailError == true || passwordError == true || passConfirm == true) {
-                    $('.name, .email, .pass, .passConfirm').blur();
-                } else {
-                    $('.signup, .login').addClass('switched');
-
-                    setTimeout(function () { $('.signup, .login').hide(); }, 700);
-                    setTimeout(function () { $('.brand').addClass('active'); }, 300);
-                    setTimeout(function () { $('.heading').addClass('active'); }, 600);
-                    setTimeout(function () { $('.success-msg p').addClass('active'); }, 900);
-                    setTimeout(function () { $('.success-msg a').addClass('active'); }, 1050);
-                    setTimeout(function () { $('.form').hide(); }, 700);
-                }
-            });
-
-            // Reload page
-            $('a.profile').on('click', function () {
-                location.reload(true);
-            });
-
-
-            });
-
-        </script>
+                          <div class="form-group">
+                           <input type="password" name="password" class="input-text" placeholder="Password">
+                       </div>
+                       <div class="form-group">
+                        <input type="password" name="password" class="input-text" placeholder="Confirm Password">
+                    </div>
+         
+                           <div class="CTA">
+                              <input class="ctainput" type="submit" value="Signup Now" id="submit">
+                              
+                           </div>
+                        </form>
+                     </div><!-- End Signup Form -->
+                  </div>
+               </div>
+         
+            </section>
+         
+         </div>
+         <footer>
+            <div class="social">
+            <a href="#" class="fa fa-facebook-square"></a><a href="#" class="fa fa-envelope"></a><a href="#" class="fa fa-linkedin-square"></a>
+         </div>
+            <p>The International Relations Cell is a student body working under the Office of International Relations towards increasing IIT Kharagpur's global outreach.</p>
+         <p>Have any issues? Mail us at  <a style="color:rgb(21, 216, 21)"> ftp.ircell@gmail.com</a></p>
+         </footer>
+         
+        <script src="login.js"></script>
     </body>
 </head>
 </html>
